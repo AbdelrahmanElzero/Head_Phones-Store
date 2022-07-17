@@ -1,0 +1,454 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Catamaran', sans-serif;
+  transition: .4s;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.special_heading {
+  text-align: center;
+  font-size: 100px;
+  font-weight: 800;
+  letter-spacing: -3px;
+  color: #ebeced;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 410px){
+  .special_heading{
+    font-size: 75px;
+  }
+}
+
+/* ############## Nav bar ########### */
+.navbar {
+  z-index: 9999;
+}
+
+.navbar .navbar-brand svg {
+  color: #078fb1;
+  font-size: 35px;
+}
+
+.navbar .nav-link {
+  color: white;
+  z-index: 9999;
+}
+
+.active{
+  color: #00add8;
+}
+.navbar .nav-link.active{
+  color: #00add8;
+}
+.navbar .nav-link:hover{
+  color: #00add8;
+}
+
+.navbar .navbar-toggler{
+  color: #00add8;
+  opacity: .6;
+}
+
+.navbar .navbar-toggler svg{
+  color: white;
+}
+
+/* ################# Carousel ################# */
+.carousel {
+  background-color: #777;
+  position: relative;
+  color: white;
+}
+
+.carousel-inner .carousel-item {
+  height: 100vh;
+}
+
+.carousel-inner .carousel-item .item-pic { position: relative; }
+.carousel-inner .carousel-item .item-pic::before { 
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00000099;
+}
+
+.carousel-inner .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-item .carousel-caption {
+  z-index: 99;
+}
+
+.carousel .carousel-indicators button{
+  font-size: 30px;
+}
+
+
+.carousel .carousel-caption{
+  padding-bottom: 100px;
+}
+
+/* ################## About ############# */
+.about img {
+  width: 300px;
+  margin-bottom: 40px;
+}
+
+.about .content .title {
+  font-weight: bold;
+  font-size: 36px;
+}
+
+.about .content p {
+  font-size: 15px;
+  line-height: 1.7;
+  letter-spacing: .09rem;
+  color: #777;
+}
+
+.about .details p {
+  color: #777;
+}
+
+.about .details p svg {
+  margin-right: 14px;
+}
+
+.about .shop a {
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 5px 10px;
+  background-color: #037996;
+}
+
+.about .shop a:hover {
+  background-color: #00add8;
+  color: white;
+}
+
+/* ##################### Products ############# */
+.products {
+  position: relative;
+  user-select: none;
+}
+
+.products img {
+  width: 120px;
+  margin-bottom: 14px;
+  position: relative;
+  transition: .7s;
+}
+
+.products img:hover {
+  transform: translateY(-20px);
+}
+
+.products .product_title {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.products .price {
+  font-size: 19px;
+  font-weight: bold;
+}
+
+.products a{
+  margin-left: 20px;
+  padding: 5px 7px;
+  border: none;
+  outline: none;
+}
+
+.products a svg {
+  position: relative;
+  font-size: 20px;
+  transition: .6s;
+}
+
+.products a:hover svg {
+  color: #00add8;
+  transform: translateX(10px);
+}
+
+.products .modal {
+  z-index: 10000000;
+}
+
+
+/* ######################## Accordion ############ */
+.accordion {
+  background-color: #037996cf;
+}
+
+.accordion-item {
+  background-color: #ebeced;
+  outline: none;
+}
+
+
+.accordion-item .accordion-button {
+  font-weight: bold;
+  font-size: 18px;
+  color: black;
+}
+
+/* ############### Contact ########### */
+.contact .row img{
+    margin-right: 100px;
+    width: 600px;
+    position: relative;
+    animation: up-and-down 5s linear infinite;
+}
+
+/* ##### image animation ######## */
+@keyframes up-and-down{
+    0%,
+    100%{
+        top: 0;
+    }
+    50%{
+        top: -50px;
+    }
+}
+
+.contact .contact-form form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+
+}
+
+@media (max-width: 991px) {
+  .contact .contact-form {
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+.contact .contact-form .content h2 {
+  padding: 10px 15px;
+  text-align: center;
+}
+
+.contact .contact-form form .input {
+  background-color: #fafafa;
+  color: black;
+  border-radius: 5px;
+  padding: 14px 10px;
+  border: none;
+  outline: none;
+  caret-color: #037996;
+  border-bottom: 2px solid #037996;
+  width: 300px;
+}
+
+@media (min-width: 991px){
+  .contact .contact-form form .input{
+    width: 400px;
+  }
+}
+
+.contact .contact-form form textarea {
+  height: 200px;
+  resize: none;
+}
+
+.contact .contact-form form a {
+  text-align: center;
+  background-color: #037996;
+  padding: 10px 25px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: white;
+  width: 190px;
+  font-size: 18px;
+  transition: .5s;
+}
+
+.contact .contact-form form a svg {
+  margin-left: 10px;
+  position: relative;
+  transition: .5s;
+}
+
+.contact .contact-form form a:hover{
+  background-color: #078fb1;
+}
+.contact .contact-form form a:hover svg {
+  transform: translateX(10px);
+}
+
+/* ############### Footer ############### */
+.footer .footer_content h3{
+  font-size: 23px;
+  font-weight: bold;
+  color: white;
+}
+
+.footer_content svg {
+  color: #037996;
+  font-size: 35px;
+}
+
+.footer .footer_subscribe input {
+  background-color: #ebeced;
+  color: black;
+  border-radius: 5px;
+  padding: 14px 10px;
+  border: none;
+  outline: none;
+  caret-color: #037996;
+  border: 2px solid #037996;
+  margin-bottom: 14px;
+}
+
+.footer .footer_content .footer_button {
+  border: none;
+  outline: none;
+  background-color: #037996;
+  color: white;
+  padding: 8px 24px;
+  text-align: center;
+  font-size: 19px;
+}
+
+.footer .footer_content .footer_button:hover{
+  background-color: #078fb1;
+}
+
+.footer .footer_content .footer_button svg {
+  color: white;
+  transform: rotate(45deg);
+  font-size: 15px;
+  margin-left: 10px;
+  transition: .5s;
+}
+
+.footer .footer_content .footer_button:hover svg {
+  transform: rotate(45deg) translateY(-5px);
+}
+
+.footer .footer_content .footer_info{
+  color: #777;
+  font-size: 15px;
+}
+
+
+.footer .footer_data .footer_info{
+  font-size: 20px;
+  margin-bottom: 14px;
+}
+
+.footer .footer_data .social_media a svg{
+  margin-right: 10px;
+  font-size: 25px;
+  color: #777;
+}
+
+.footer .social_media .fa-facebook:hover {
+  color: #1877f2;
+}
+
+.footer .social_media .fa-linkedin:hover {
+  color: #0077b5;
+}
+
+.footer .social_media .fa-twitter:hover {
+  color: #1da1f2;
+}
+
+.footer .footer_content img{
+  width: 60px;
+}
+
+/* ########## Scroll To Top Button ############# */
+.top {
+  position: fixed;
+  right: -50px;
+  bottom: 50px;
+  background-color:#037996;
+  padding: 5px 10px;
+  color: white;
+  transition: .5s;
+  border-radius: 5px;
+  z-index: 999;
+}
+
+.top svg {
+  color: white;
+}
+
+.top:hover {
+  transform: translateY(-15px);
+  background-color: #00add8;
+}
+
+.top.show {
+  right: 10px;
+}
+
+.modal .modal-header{
+  border-bottom-color: rgba(255, 255, 255, 0.094);
+}
+
+.modal .modal-header button{
+  border: none;
+  outline: none;
+  color: white;
+}
+
+
+.modal .modal-footer{
+  border-top-color: rgba(255, 255, 255, 0.094);
+}
+
+.modal .modal-title{
+  font-size: 26px;
+}
+
+
+.modal input,
+.modal .form-control{
+  padding: 10px 10px;
+  border: 2px solid #00add87a;
+  caret-color: white;
+  outline: none;
+}
