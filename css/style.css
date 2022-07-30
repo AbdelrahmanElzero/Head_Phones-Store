@@ -15,6 +15,7 @@ html {
 body {
   font-family: 'Catamaran', sans-serif;
   transition: .4s;
+  overflow-x: hidden;
 }
 
 ul {
@@ -231,7 +232,6 @@ img {
 
 /* ############### Contact ########### */
 .contact .row img{
-    margin-right: 100px;
     width: 600px;
     position: relative;
     animation: up-and-down 5s linear infinite;

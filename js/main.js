@@ -36,56 +36,6 @@ window.onscroll = function (){
 };
 
 
-
-let sr = ScrollReveal({});
-
-sr.reveal(`.aboutImage`, {
-  origin: 'left',
-  distance: '60px',
-  duration: '3000',
-  delay: '200'
-})
-
-
-
-sr.reveal(`.about__content`, {
-  origin: 'right',
-  distance: '60px',
-  duration: '3000',
-  delay: '200'
-})
-
-sr.reveal(`.products`, {
-  origin: 'top',
-  distance: '60px',
-  duration: '3000',
-  delay: '200'
-})
-
-sr.reveal(`.contact__image`, {
-  origin: 'left',
-  distance: '60px',
-  duration: '3000',
-  delay: '200'
-})
-
-sr.reveal(`.contact__image`, {
-  origin: 'bottom',
-  distance: '60px',
-  duration: '3000',
-  delay: '200'
-})
-sr.reveal(`.contact-form`, {
-  origin: 'top',
-  distance: '60px',
-  duration: '3000',
-  delay: '200'
-})
-
-
-
-
-
 let navigation = document.querySelector(".navigation")
 let toggle = document.querySelector(".toggle")
 
